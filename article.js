@@ -1,10 +1,19 @@
 
-var query
-var bDate
-var eDate
+
+
+
+
+
+$("#runSearch").on("click", searchArt)
+
+function searchArt(){
 
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
+var query = $("#searchTerm")
+var bDate
+var eDate
+$("")
 query = "trump"
 bDate = 2000
 eDate = 2010
@@ -23,4 +32,6 @@ $.ajax({
   console.log(result);
 }).fail(function(err) {
   throw err;
-});
+});//end of ajax
+
+}//end of main function
